@@ -1,0 +1,67 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=$HOME/.config/i3blocks/blocks/$BLOCK_NAME
+separator_block_width=12
+markup=none
+
+# Keyboard layout
+#
+# see https://github.com/vivien/i3blocks-contrib/tree/master/xkb_layout
+[xkb_layout]
+font=monospace
+interval=persist
+label=⌨️ 
+markup=pango
+
+# Volume indicator
+[volume]
+interval=once
+label=♪ 
+signal=10
+
+# Memory usage
+#
+# see https://github.com/vivien/i3blocks-contrib/tree/master/memory
+[memory]
+label=MEM 
+separator=false
+interval=1
+
+[memory]
+label=SWAP 
+instance=swap
+interval=1
+
+# Disk usage
+#
+# see https://github.com/vivien/i3blocks-contrib/tree/master/disk
+[disk]
+label=HOME 
+interval=30
+
+# Network interface monitoring
+#
+# see https://github.com/vivien/i3blocks-contrib/tree/master/iface
+[iface]
+color=#00FF00
+interval=10
+
+# CPU usage
+# 
+# see https://github.com/vivien/i3blocks-contrib/tree/master/cpu_usage
+[cpu_usage]
+label=CPU 
+interval=1
+
+# Date Time
+#
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=1
