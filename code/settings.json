@@ -1,6 +1,0 @@
-{
-    "vim.useSystemClipboard": true,
-    "window.zoomLevel": 0,
-    "window.openFilesInNewWindow": "on",
-    "workbench.editor.enablePreview": false
-}
