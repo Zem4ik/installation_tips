@@ -1,0 +1,12 @@
+program_options:
+  tray: true
+  menu: "flat"
+  automount: false
+  notify: true
+
+# For home desktop
+# device_config:
+#   - id_uuid: 0ACA3E71CA3E5961
+#     ignore: false
+
+quickmenu_actions: [mount, unmount]
