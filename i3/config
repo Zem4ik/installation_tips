@@ -30,6 +30,11 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
+# Use xbacklight to manage brightness
+set $backlight_ctrl acpi_video0
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -ctrl $backlight_ctrl -inc 10 && pkill -RTMIN+12 i3blocks
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -ctrl $backlight_ctrl -dec 10 && pkill -RTMIN+12 i3blocks
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
