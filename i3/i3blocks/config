@@ -20,6 +20,20 @@ interval=persist
 label=⌨️ 
 markup=pango
 
+# Battery status
+#
+# see https://github.com/vivien/i3blocks-contrib/tree/master/battery2
+[battery]
+markup=pango
+interval=5
+
+# Backlight status
+[backlight]
+label=☀
+signal=12
+#STEP_SIZE=5
+#CTRL=acpi_video0
+
 # Volume indicator
 [volume]
 interval=once

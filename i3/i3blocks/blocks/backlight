@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+STEP_SIZE=${STEP_SIZE:-5}
+
+if [ -n "$CTRL" ] ; then
+    XBACKLIGHT="xbacklight -ctrl $CTRL"
+else
+    XBACKLIGHT="xbacklight"
+fi
+
+case $BLOCK_BUTTON in
+  3) xset dpms force off ;; # right click
+  4) $XBACKLIGHT -inc "$STEP_SIZE" ;; # scroll up
+  5) $XBACKLIGHT -dec "$STEP_SIZE" ;; # scroll down, decrease
+esac
+
+BRIGHTNESS=$($XBACKLIGHT -get | cut -f1 -d'.')
+echo "${BRIGHTNESS}%"
